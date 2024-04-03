@@ -1,0 +1,23 @@
+
+<div>
+  <input #searchQuery type="text" placeholder="Pesquisar no tmdb">
+  <button (click)="searchMovies(searchQuery.value)">Buscar</button>
+</div>
+
+<div *ngIf="movies.length">
+  <h2>Resultados:</h2>
+  <ul>
+    <li *ngFor="let movie of movies">
+      <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}">
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.release_date }}</p>
+      <button (click)="selectMovie(movie.id)">View Details</button>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedMovie">
+  <h2>{{ selectedMovie.title }}</h2>
+  <img [src]="'https://image.tmdb.org/t/p/w200' + selectedMovie.poster_path" alt="{{ selectedMovie.title }}">
+  <p>{{ selectedMovie.overview }}</p>
+</div>
