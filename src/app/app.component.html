@@ -1,3 +1,5 @@
+<app-header></app-header>
+<br>
 
 <div>
   <input #searchQuery type="text" placeholder="Pesquisar no tmdb">
@@ -5,13 +7,14 @@
 </div>
 
 <div *ngIf="movies.length">
-  <h2>Resultados:</h2>
-  <ul>
+  <h3>Resultados da pesquisa:</h3>
+  <ul style="list-style-type: none;">
     <li *ngFor="let movie of movies">
       <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}">
       <h3>{{ movie.title }}</h3>
       <p>{{ movie.release_date }}</p>
       <button (click)="selectMovie(movie.id)">View Details</button>
+      <br><br>
     </li>
   </ul>
 </div>
