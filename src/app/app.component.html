@@ -1,9 +1,11 @@
+<section>
 <app-header></app-header>
 <br>
 
 <div>
   <input #searchQuery type="text" placeholder="Pesquisar no tmdb">
   <button (click)="searchMovies(searchQuery.value)">Buscar</button>
+  <br><br>
 </div>
 
 <div *ngIf="movies.length">
@@ -13,7 +15,7 @@
       <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}">
       <h3>{{ movie.title }}</h3>
       <p>{{ movie.release_date }}</p>
-      <button (click)="selectMovie(movie.id)">View Details</button>
+      <button (click)="selectMovie(movie.id)">Detalhes</button>
       <br><br>
     </li>
   </ul>
@@ -26,3 +28,4 @@
 </div>
 
 <app-footer></app-footer>
+</section>

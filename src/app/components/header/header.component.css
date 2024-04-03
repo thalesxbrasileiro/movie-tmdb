@@ -1,20 +1,20 @@
 header {
-    background-color: #333; /* Cor de fundo do cabeçalho */
-    padding: 40px 0; /* Espaçamento interno */
+    background-color: #333; 
+    padding: 40px 0; 
 }
 
 nav ul {
-    list-style-type: none; /* Remove os marcadores de lista */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline; /* Exibe os itens da lista em linha */
+    display: inline; 
 }
   
 nav ul li a {
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
-    padding: 10px; /* Espaçamento interno */
+    color: white; 
+    text-decoration: none; 
+    padding: 10px; 
 }
