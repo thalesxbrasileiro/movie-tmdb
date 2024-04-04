@@ -1,0 +1,7 @@
+<section>
+    <div *ngIf="resultado">
+        <h2>{{ resultado.title }}</h2>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
+        <p>{{ resultado.overview }}</p>
+    </div>
+</section>

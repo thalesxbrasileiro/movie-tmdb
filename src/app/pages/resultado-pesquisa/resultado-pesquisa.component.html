@@ -17,16 +17,18 @@
           <div class="card-content">
             <p>Ano: {{ movie.release_date }}</p>
             <p>Avaliação: {{ movie.vote_average | number:'1.2-2' }}</p><br>
-            <button class="detalhes" (click)="selectMovie(movie.id)">Detalhes</button>
+            <a routerLink="/home/filme/{{ movie.id }}">
+              <button class="detalhes" (click)="selectMovie(movie.id)">Detalhes</button>
+            </a>
           </div>
         </div>
       </li>
     </ul>
   </div>
   
-  <div *ngIf="selectedMovie">
+  <!-- <div *ngIf="selectedMovie">
     <h2>{{ selectedMovie.title }}</h2>
     <img [src]="'https://image.tmdb.org/t/p/w200' + selectedMovie.poster_path" alt="{{ selectedMovie.title }}">
     <p>{{ selectedMovie.overview }}</p>
-  </div>
+  </div> -->
 </section>
