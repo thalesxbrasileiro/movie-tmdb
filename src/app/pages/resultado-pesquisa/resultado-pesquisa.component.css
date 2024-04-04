@@ -79,8 +79,8 @@ ul {
 }
 
 .card:hover {
-  transform: scale(1.02);
-  background-color: #e6e6e6;
+  transform: translateY(-5px); /* Move o card para cima ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
 .card img {
