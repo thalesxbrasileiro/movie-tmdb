@@ -6,6 +6,7 @@ import { FilmeComponent } from './pages/filme/filme.component';
 import { ResultadoPesquisaComponent } from './pages/resultado-pesquisa/resultado-pesquisa.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, children: [
     { path: '', component: ResultadoPesquisaComponent }, 
     { path: 'filme/:id', component: FilmeComponent }
