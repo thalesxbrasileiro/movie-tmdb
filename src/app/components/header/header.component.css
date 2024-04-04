@@ -1,20 +1,97 @@
+/* Estilo para o cabeçalho */
 header {
-    background-color: #333; 
-    padding: 40px 0; 
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 20px 0; /* Adiciona espaço acima e abaixo do cabeçalho */
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    border-bottom: 2px solid #ccc; /* Adiciona uma borda na parte inferior */
 }
 
-nav ul {
-    list-style-type: none; 
-    margin: 0;
+/* Estilo para o nome do site */
+.nome-do-site {
+    font-size: 36px; /* Tamanho da fonte maior */
+    color: #e9cbcb; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo para a seção principal */
+section {
+    margin: 20px auto; /* Centraliza a seção */
+    max-width: 800px; /* Define a largura máxima da seção */
+}
+
+/* Estilo para o container dos elementos de entrada */
+div {
+    margin-bottom: 20px; /* Aumenta o espaço entre os elementos */
+}
+
+/* Estilo para o campo de pesquisa */
+input[type="text"] {
+    padding: 10px; /* Aumenta o espaço interno */
+    width: 100%; /* Preenche todo o espaço disponível */
+    border: 2px solid #ccc; /* Adiciona uma borda */
+    border-radius: 5px; /* Borda arredondada */
+    box-sizing: border-box; /* Inclui a borda no tamanho total do elemento */
+}
+
+/* Estilo para o botão de busca */
+button {
+    padding: 10px 20px; /* Aumenta o espaço interno */
+    background-color: #007bff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para o ponteiro ao passar por cima */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo para os resultados da pesquisa */
+h3 {
+    margin-top: 20px; /* Aumenta o espaço acima do título */
+}
+
+ul {
     padding: 0;
+    list-style-type: none;
 }
 
-nav ul li {
-    display: inline; 
+/* Estilo para o card */
+.card {
+    background-color: #ffffff; /* Cor de fundo */
+    border: 1px solid #ddd; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: all 0.3s ease; /* Transição suave */
 }
-  
-nav ul li a {
-    color: white; 
-    text-decoration: none; 
-    padding: 10px; 
+
+.card:hover {
+    transform: scale(1.02); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+/* Estilo para os botões de detalhes */
+button {
+    padding: 10px 20px; /* Aumenta o espaço interno */
+    background-color: #007bff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para o ponteiro ao passar por cima */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
 }

@@ -1,0 +1,123 @@
+/* Estilo para a seção */
+section {
+  margin: 20px;
+}
+
+/* Estilo para o container dos elementos de entrada */
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o campo de pesquisa */
+input[type="text"] {
+  padding: 10px;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border: 1px solid #007bff; 
+}
+
+/* Estilo para o botão de busca */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease;
+  width: auto; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para os botões de detalhes */
+button.detalhes {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.detalhes:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para os resultados da pesquisa */
+h3 {
+  margin-top: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 250px;
+  text-align: center;
+  margin-bottom: 10px; /* Reduzindo a margem inferior para deixar os cards mais próximos */
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background-color: #e6e6e6;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+/* Estilo para os botões de detalhes */
+button.detalhes {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.detalhes:hover {
+  background-color: #0056b3;
+}
+
+/* Limita o número de linhas do título */
+.card-content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
