@@ -9,6 +9,7 @@ import { ResultadoPesquisaComponent } from './pages/resultado-pesquisa/resultado
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FilmeComponent } from './pages/filme/filme.component';
+import { ContaComponent } from './pages/conta/conta.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FilmeComponent } from './pages/filme/filme.component';
     ResultadoPesquisaComponent,
     HomeComponent,
     NotFoundComponent,
-    FilmeComponent
+    FilmeComponent,
+    ContaComponent
   ],
   imports: [
     BrowserModule,
