@@ -7,12 +7,14 @@ import { Observable, map, catchError } from 'rxjs';
 })
 export class TmdbService {
   
+  private baseUrl = 'https://api.themoviedb.org/3';
   private apiKey = 'e29649a70cf989a53de3b7b7d45aa2c8';
+  private language = 'pt-BR';
 
   constructor(private http: HttpClient) { } 
 
   searchMovies(query: string): Observable<any> {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${query}`;
+    const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}`;
 
     return this.http.get<any>(url).pipe(
       map(response => response.results),
@@ -24,7 +26,7 @@ export class TmdbService {
   }
 
   getMovieDetails(movieId: number): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}`;
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}&language=${this.language}`;
 
     return this.http.get<any>(url).pipe(
       catchError(error => {

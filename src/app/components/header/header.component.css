@@ -18,6 +18,7 @@ header {
   text-decoration: none;
   margin-left: 20px;
   text-shadow: 3px 3px 3px #6b6b70;
+  cursor: pointer;
 }
 
 nav ul {

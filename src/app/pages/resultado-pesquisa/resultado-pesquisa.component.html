@@ -4,7 +4,7 @@
     <input #searchQuery type="text" placeholder="Pesquisar filme/serie no tmdb">
     <button (click)="searchMovies(searchQuery.value)">Buscar</button>
   </div>
-  
+
   <div *ngIf="movies.length">
     <br>
     <h3>Resultados da pesquisa:</h3>

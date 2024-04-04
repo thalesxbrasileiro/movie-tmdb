@@ -1,9 +1,7 @@
-/* Estilo para a seção */
 section {
   margin: 20px;
 }
 
-/* Estilo para o container dos elementos de entrada */
 .pesquisa {
   display: flex;
   justify-content: center;
@@ -11,7 +9,6 @@ section {
   margin-bottom: 10px;
 }
 
-/* Estilo para o campo de pesquisa */
 input[type="text"] {
   padding: 10px;
   width: 50%;
@@ -22,10 +19,9 @@ input[type="text"] {
 
 input[type="text"]:hover,
 input[type="text"]:focus {
-  border: 1px solid #007bff; 
+  border: 1px solid #007bff;
 }
 
-/* Estilo para o botão de busca */
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -34,20 +30,19 @@ button {
   cursor: pointer;
   border-radius: 0 20px 20px 0;
   transition: background-color 0.3s ease;
-  width: auto; 
+  width: auto;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Estilo para os botões de detalhes */
 button.detalhes {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50px; 
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -56,9 +51,9 @@ button.detalhes:hover {
   background-color: #0056b3;
 }
 
-/* Estilo para os resultados da pesquisa */
 h3 {
   margin-top: 10px;
+  color: #5c5a63;
 }
 
 ul {
@@ -74,26 +69,37 @@ ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   width: 250px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-bottom: 10px; /* Reduzindo a margem inferior para deixar os cards mais próximos */
+  margin-bottom: 10px;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Move o card para cima ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .card-content {
   padding: 10px;
 }
 
-/* Estilo para os botões de detalhes */
+.card-content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
 button.detalhes {
   padding: 10px 20px;
   background-color: #007bff;
@@ -108,7 +114,6 @@ button.detalhes:hover {
   background-color: #0056b3;
 }
 
-/* Limita o número de linhas do título */
 .card-content p {
   overflow: hidden;
   white-space: nowrap;
@@ -120,4 +125,5 @@ button.detalhes:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 10%;
 }

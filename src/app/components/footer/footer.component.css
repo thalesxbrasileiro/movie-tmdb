@@ -14,3 +14,7 @@ footer {
 a {
     color: lightblue;    
 }
+
+.hidden-footer {
+    transform: translateY(100%);
+  }
