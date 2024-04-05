@@ -4,7 +4,6 @@
             <div class="card" *ngIf="resultado">
                 <h2>{{ resultado.title }}</h2>
                 <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
-
                 <div class="info">
                     <p>
                         <b>Gênero(s): </b>
@@ -37,7 +36,6 @@
                             {{ resultado.original_language }}
                         </span>
                     </p>
-
                     <p>
                         <b>Quantidade de votos: </b>
                         <span>
@@ -45,13 +43,12 @@
                         </span>
                     </p>
                     <p>
-                        <b>Avaliação da Tmdb: </b> 
+                        <b>Avaliação da Tmdb: </b>
                         <span [style.color]="resultado.vote_average < 7 ? 'red' : 'blue'" style="font-weight: bold;">
                             {{ resultado.vote_average | number:'1.2-2' }}
                         </span>
                     </p>
                 </div>
-
             </div>
             <br><br><br><br><br>
         </div>

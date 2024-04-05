@@ -1,15 +1,18 @@
 <app-header></app-header>
-<section>
+
+<section class="registration-section">
     <div class="card">
         <form method="post">
+            <h2>MoviesTmdb</h2>
+
             <label class="form-label" for="fullname">Seu nome:</label>
-            <input class="form-input" type="text" id="fullname" name="fullname" required [(ngModel)] = name>
+            <input class="form-input" type="text" id="fullname" name="fullname" required [(ngModel)]="name">
 
             <label class="form-label" for="email">Email:</label>
-            <input class="form-input" type="email" id="email" name="email" required [(ngModel)] = email>
+            <input class="form-input" type="email" id="email" name="email" required [(ngModel)]="email">
 
             <label class="form-label" for="password">Senha:</label>
-            <input class="form-input" type="password" id="password" name="password" required [(ngModel)] = password>
+            <input class="form-input" type="password" id="password" name="password" required [(ngModel)]="password">
 
             <label class="form-label" for="birthdate">Data de Nascimento:</label>
             <input class="form-input" type="date" id="birthdate" name="birthdate" required>
@@ -25,4 +28,5 @@
         </form>
     </div>
 </section>
+
 <app-footer></app-footer>
