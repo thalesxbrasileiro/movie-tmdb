@@ -1,22 +1,27 @@
 <section>
-    <div class="container">
-        <div class="card" *ngIf="resultado">
-            <h2>{{ resultado.title }}</h2>
-            <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
-            <p>
-                Gênero(s):
-                <span *ngFor="let genre of resultado.genres">
-                    {{ genre.name }}
-                </span>
-            </p>
-            <p>Descrição: {{ resultado.overview }}</p>
-            <p>
-                País:
-                <span *ngFor="let pais of resultado.production_countries">
-                    {{ pais.name }}
-                </span>
-            </p>
-            <p class="rating">Avaliação: {{ resultado.vote_average | number:'1.2-2' }}</p>
+    <div>
+        <br><br><br><br><br>
+        <div class="container">
+            <div class="card" *ngIf="resultado">
+                <h2>{{ resultado.title }}</h2>
+                <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path"
+                    alt="{{ resultado.title }}">
+                <p>
+                    Gênero(s):
+                    <span *ngFor="let genre of resultado.genres">
+                        {{ genre.name }}
+                    </span>
+                </p>
+                <p>Descrição: {{ resultado.overview }}</p>
+                <p>
+                    País:
+                    <span *ngFor="let pais of resultado.production_countries">
+                        {{ pais.name }}
+                    </span>
+                </p>
+                <p class="rating">Avaliação: {{ resultado.vote_average | number:'1.2-2' }}</p>
+            </div>
+            <br><br><br><br><br>
         </div>
     </div>
 </section>
