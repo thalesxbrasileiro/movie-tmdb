@@ -15,8 +15,9 @@
           <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}">
           <h3>{{ movie.title }}</h3>
           <div class="card-content">
-            <p>Data: {{ formatDate(movie.release_date) }}</p>
-            <p>Avaliação: {{ movie.vote_average | number:'1.2-2' }}</p><br>
+            <p>Lançamento: {{ formatDate(movie.release_date) }}</p>
+            <p>Avaliação Tmdb: {{ movie.vote_average | number:'1.2-2' }}</p>
+            <p>Votos: {{ movie.vote_count }}</p><br>
             <a routerLink="/home/filme/{{ movie.id }}">
               <button class="detalhes" (click)="selectMovie(movie.id)">Detalhes</button>
             </a>

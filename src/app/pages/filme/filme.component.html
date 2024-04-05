@@ -1,25 +1,58 @@
 <section>
     <div>
-        <br><br><br><br><br>
+
         <div class="container">
             <div class="card" *ngIf="resultado">
                 <h2>{{ resultado.title }}</h2>
-                <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path"
-                    alt="{{ resultado.title }}">
-                <p>
-                    Gênero(s):
-                    <span *ngFor="let genre of resultado.genres">
-                        {{ genre.name }}
-                    </span>
-                </p>
-                <p>Descrição: {{ resultado.overview }}</p>
-                <p>
-                    País:
-                    <span *ngFor="let pais of resultado.production_countries">
-                        {{ pais.name }}
-                    </span>
-                </p>
-                <p class="rating">Avaliação: {{ resultado.vote_average | number:'1.2-2' }}</p>
+                <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
+
+                <div class="info">
+                    <p>
+                        <b>Gênero(s): </b>
+                        <span *ngFor="let genre of resultado.genres">
+                            {{ genre.name }}
+                        </span>
+                    </p>
+                    <p>
+                        <b>Descrição: </b>{{ resultado.overview }}
+                    </p>
+                    <p>
+                        <b>Data de Lançamento: </b> {{ formatDate(resultado.release_date) }}
+                    </p>
+
+                    <p>
+                        <b>Produtora:</b>
+                        <span *ngFor="let produtora of resultado.production_companies">
+                            {{ produtora.name }}
+                        </span>
+                    </p>
+                    <p>
+                        <b>País da Produção: </b>
+                        <span *ngFor="let pais of resultado.production_countries">
+                            {{ pais.name }}
+                        </span>
+                    </p>
+                    <p>
+                        <b>Língua: </b>
+                        <span>
+                            {{ resultado.original_language }}
+                        </span>
+                    </p>
+
+                    <p>
+                        <b>Quantidade de votos: </b>
+                        <span>
+                            {{ resultado.vote_count }}
+                        </span>
+                    </p>
+                    <p>
+                        <b>Avaliação da Tmdb: </b> 
+                        <span [style.color]="resultado.vote_average < 7 ? 'red' : 'blue'" style="font-weight: bold;">
+                            {{ resultado.vote_average | number:'1.2-2' }}
+                        </span>
+                    </p>
+                </div>
+
             </div>
             <br><br><br><br><br>
         </div>

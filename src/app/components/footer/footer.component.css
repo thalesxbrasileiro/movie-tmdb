@@ -1,20 +1,21 @@
 footer {
-    background-color: #333; 
-    color: white; 
-    padding: 15px 0; 
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 15px; 
+    font-size: 15px;
     line-height: 25px;
 }
 
 a {
-    color: lightblue;    
+    color: lightblue;
 }
 
-.hidden-footer {
-    transform: translateY(100%);
-  }
+/* Adicionando uma margem inferior para o conteúdo para que o footer não o cubra */
+main {
+    margin-bottom: 80px; /* Altura do footer */
+}
