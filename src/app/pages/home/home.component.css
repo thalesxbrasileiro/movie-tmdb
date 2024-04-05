@@ -1,3 +1,69 @@
-main {
-  margin-top: 100px;
+section {
+  margin: 20px;
+}
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border: 1px solid #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.detalhes {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.detalhes:hover {
+  background-color: #0056b3;
+}
+
+h3 {
+  margin-top: 10px;
+  color: #5c5a63;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10%;
 }

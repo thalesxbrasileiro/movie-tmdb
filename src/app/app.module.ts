@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ResultadoPesquisaComponent } from './pages/resultado-pesquisa/resultado-pesquisa.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FilmeComponent } from './pages/filme/filme.component';
 import { ContaComponent } from './pages/conta/conta.component';
+import { CardFilmeComponent } from './components/card-filme/card-filme.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,16 +18,17 @@ import { ContaComponent } from './pages/conta/conta.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ResultadoPesquisaComponent,
     HomeComponent,
     NotFoundComponent,
     FilmeComponent,
-    ContaComponent
+    ContaComponent,
+    CardFilmeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [
     provideClientHydration()

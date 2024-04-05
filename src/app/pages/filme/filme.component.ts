@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TmdbService } from '../../../service/tmdb.service';
+import { TmdbService } from '../../service/tmdb.service';
 
 @Component({
   selector: 'app-filme',
