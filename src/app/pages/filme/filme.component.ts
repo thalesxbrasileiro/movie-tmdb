@@ -8,7 +8,7 @@ import { TmdbService } from '../../service/tmdb.service';
   styleUrl: './filme.component.css'
 })
 export class FilmeComponent implements OnInit {
-  
+
   Object: any;
   $last: any;
 
