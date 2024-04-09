@@ -13,11 +13,10 @@ export class HomeComponent {
   constructor(private tmdbService: TmdbService) {}
 
   searchMovies(query: string) {
-    this.tmdbService.searchMovies(query)
-      .subscribe(
-        movies => this.movies = movies,
-        error => console.error('Error searching movies:', error)
-      );
+    this.tmdbService.searchMovies(query).subscribe({
+      next: movies => this.movies = movies,
+      error: error => console.error('Erro ao pesquisar filmes:', error)
+    });
   }
   
 }
