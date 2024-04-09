@@ -11,5 +11,10 @@
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of movies" [movie]="movie"></app-card-filme>
         </ul>
+        <div class="pagination">
+            <button (click)="previousPage()">Página anterior</button>
+            <span>Página {{ currentPage }}</span> 
+            <button (click)="nextPage()">Próxima página</button>
+        </div>
     </div>
 </section>

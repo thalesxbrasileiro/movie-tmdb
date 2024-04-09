@@ -23,33 +23,31 @@ input[type="text"]:focus {
   border-color: #007bff;
 }
 
+button:hover {
+  background-color: #0056b3;
+}
+
 button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  cursor: pointer;
-  border-radius: 0 20px 20px 0;
-  transition: background-color 0.3s ease;
-  width: auto;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-button.detalhes {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button.detalhes:hover {
   background-color: #0056b3;
+}
+
+span {
+  background-color: white;
+  padding: 0.7%;
+  border-radius: 50px;
+  margin-right: 10px;
+  color: #5c5a63;
+  font-size: 1.2em;
 }
 
 h3 {
@@ -67,4 +65,23 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 5%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination button {
+  margin: 0 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
 }

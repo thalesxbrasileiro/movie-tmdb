@@ -36,11 +36,11 @@ export class TmdbService {
     );
   }
 
-  getPopularMovies(): Observable<any> {
-    const url = `${this.baseUrl}/movie/popular?api_key=${this.apiKey}&language=${this.language}`;
-
+  getPopularMovies(page: number, itemsPerPage: number): Observable<any> {
+    const url = `${this.baseUrl}/movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${page}`;
+  
     return this.http.get<any>(url).pipe(
-      map(response => response.results),
+      map(response => response.results.slice(0, itemsPerPage)), 
       catchError(error => {
         console.error('Error:', error);
         throw error;
