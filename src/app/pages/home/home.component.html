@@ -4,17 +4,22 @@
         <button (click)="searchMovies(searchQuery)">Buscar</button>
     </div>
 
-    <h3 *ngIf="!searchQuery">Filmes mais populares:</h3>
-
-    <div *ngIf="movies.length">
-        <h3 *ngIf="searchQuery">Resultados da pesquisa:</h3><br>
+    <div *ngIf="!searchClicked">
+        <br><h3>Filmes mais populares:</h3><br>
         <ul class="movie-list">
-            <app-card-filme *ngFor="let movie of movies" [movie]="movie"></app-card-filme>
+            <app-card-filme *ngFor="let movie of popularMovies" [movie]="movie"></app-card-filme>
         </ul>
         <div class="pagination">
             <button (click)="previousPage()">Página anterior</button>
             <span>Página {{ currentPage }}</span> 
             <button (click)="nextPage()">Próxima página</button>
         </div>
+    </div>
+
+    <div *ngIf="searchQuery && searchClicked">
+        <br><h3>Resultados da pesquisa:</h3><br>
+        <ul class="movie-list">
+            <app-card-filme *ngFor="let movie of searchResults" [movie]="movie"></app-card-filme>
+        </ul>
     </div>
 </section>

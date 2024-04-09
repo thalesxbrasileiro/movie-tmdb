@@ -6,18 +6,22 @@ import { TmdbService } from '../../service/tmdb.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
-  movies: any[] = [];
+  popularMovies: any[] = []; 
+  searchResults: any[] = []; 
   searchQuery: string = '';
   currentPage: number = 1;
   itemsPerPage: number = 10;
+  searchClicked = false;
 
   constructor(private tmdbService: TmdbService) {}
 
   searchMovies(query: string) {
+    this.searchClicked = true;
     this.searchQuery = query;
     this.tmdbService.searchMovies(query).subscribe({
-      next: movies => this.movies = movies,
+      next: movies => this.searchResults = movies, 
       error: error => console.error('Erro ao pesquisar filmes:', error)
     });
   }
@@ -28,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   getPopularMovies(page: number, itemsPerPage: number) {
     this.tmdbService.getPopularMovies(page, itemsPerPage).subscribe({
-      next: movies => this.movies = movies,
+      next: movies => this.popularMovies = movies, 
       error: error => console.error('Erro ao carregar filmes populares:', error)
     });
   }
