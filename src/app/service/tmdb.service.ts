@@ -36,4 +36,16 @@ export class TmdbService {
     );
   }
 
+  getPopularMovies(): Observable<any> {
+    const url = `${this.baseUrl}/movie/popular?api_key=${this.apiKey}&language=${this.language}`;
+
+    return this.http.get<any>(url).pipe(
+      map(response => response.results),
+      catchError(error => {
+        console.error('Error:', error);
+        throw error;
+      })
+    );
+  }
+
 }

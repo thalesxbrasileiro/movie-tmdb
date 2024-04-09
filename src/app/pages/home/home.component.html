@@ -1,10 +1,13 @@
 <section>
     <div class="pesquisa">
-        <input #searchQuery type="text" placeholder="Pesquisar filme/serie no tmdb">
-        <button (click)="searchMovies(searchQuery.value)">Buscar</button>
+        <input [(ngModel)]="searchQuery" type="text" placeholder="Pesquisar filme/serie no tmdb">
+        <button (click)="searchMovies(searchQuery)">Buscar</button>
     </div>
+
+    <h3 *ngIf="!searchQuery">Filmes mais populares:</h3>
+
     <div *ngIf="movies.length">
-        <h3>Resultados da pesquisa:</h3><br>
+        <h3 *ngIf="searchQuery">Resultados da pesquisa:</h3><br>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of movies" [movie]="movie"></app-card-filme>
         </ul>
