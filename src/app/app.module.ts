@@ -11,6 +11,7 @@ import { FilmeComponent } from './pages/filme/filme.component';
 import { ContaComponent } from './pages/conta/conta.component';
 import { CardFilmeComponent } from './components/card-filme/card-filme.component';
 import { FormsModule } from '@angular/forms';
+import { EmConstrucaoComponent } from './pages/em-construcao/em-construcao.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     NotFoundComponent,
     FilmeComponent,
     ContaComponent,
-    CardFilmeComponent
+    CardFilmeComponent,
+    EmConstrucaoComponent
   ],
   imports: [
     BrowserModule,
