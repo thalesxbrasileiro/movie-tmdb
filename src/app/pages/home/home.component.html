@@ -5,21 +5,28 @@
     </div>
 
     <div *ngIf="!searchClicked">
-        <br><h3>Filmes mais populares:</h3><br>
+        <br>
+        <h3>Filmes mais populares:</h3><br>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of popularMovies" [movie]="movie"></app-card-filme>
         </ul>
         <div class="pagination">
             <button (click)="previousPage()">Página anterior</button>
-            <span>Página {{ currentPage }}</span> 
+            <span>Página {{ currentPage }}</span>
             <button (click)="nextPage()">Próxima página</button>
         </div>
     </div>
 
     <div *ngIf="searchQuery && searchClicked">
-        <br><h3>Resultados da pesquisa:</h3><br>
+        <br>
+        <h3>Resultados da pesquisa:</h3><br>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of searchResults" [movie]="movie"></app-card-filme>
         </ul>
+        <div class="pagination">
+            <button (click)="searchMovies(searchQuery, searchPage - 1)">Página anterior</button>
+            <span>Página {{ searchPage }}</span>
+            <button (click)="searchMovies(searchQuery, searchPage + 1)">Próxima página</button>
+        </div>
     </div>
 </section>

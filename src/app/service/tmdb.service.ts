@@ -13,8 +13,8 @@ export class TmdbService {
 
   constructor(private http: HttpClient) { } 
 
-  searchMovies(query: string): Observable<any> {
-    const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}`;
+  searchMovies(query: string, page: number = 1): Observable<any> { // Adicionado parâmetro 'page' com valor padrão 1
+    const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}&page=${page}`; // Adicionado '&page=${page}' à URL
 
     return this.http.get<any>(url).pipe(
       map(response => response.results),

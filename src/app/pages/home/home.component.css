@@ -64,14 +64,13 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 5%;
+  margin-bottom: 2.5%;
 }
 
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
