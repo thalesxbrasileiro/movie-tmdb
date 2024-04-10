@@ -9,17 +9,27 @@ Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em 
 - **Node.js**: [Download aqui](https://nodejs.org/)
 - **Angular CLI**: Instale usando o npm (Node Package Manager) com o comando:
 
+```
+npm install -g @angular/cli
+```
+
 
 ## Instalação
 
 Siga estes passos para configurar e executar o projeto localmente:
 
 1. Clone este repositório:
-
-
-2. Navegue até o diretório do projeto:
-
-3. Instale as dependências:
+```
+git clone https://github.com/seu-usuario/MoviesTmdb.git
+```
+3. Navegue até o diretório do projeto:
+```
+cd MoviesTmdb
+```
+5. Instale as dependências:
+```
+npm install
+```
 
 
 ## Configuração da API
