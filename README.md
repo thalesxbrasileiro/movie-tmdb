@@ -56,7 +56,7 @@ ng serve
 4. Acesse a aplicação em seu navegador através do endereço:
 
 ```
-http://localhost:5500/
+http://localhost:4200/
 ```
 
 ## Funcionalidades
