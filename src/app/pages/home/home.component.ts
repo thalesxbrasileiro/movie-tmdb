@@ -13,11 +13,15 @@ export class HomeComponent implements OnInit {
   searchResults: any[] = [];
   searchQuery: string = '';
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 14;
   searchClicked = false;
   searchPage: number = 1;
 
   constructor(private tmdbService: TmdbService) { }
+
+  ngOnInit(): void {
+    this.getPopularMovies(this.currentPage, this.itemsPerPage);
+  }
 
   searchMovies(query: string, page: number = 1) {
     this.searchClicked = true;
@@ -29,9 +33,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.getPopularMovies(this.currentPage, this.itemsPerPage);
-  }
 
   getPopularMovies(page: number, itemsPerPage: number) {
     this.tmdbService.getPopularMovies(page, itemsPerPage).subscribe({

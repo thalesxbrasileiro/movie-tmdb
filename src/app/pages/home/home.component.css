@@ -68,13 +68,6 @@ ul {
   margin-bottom: 2.5%;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .pagination button {
   margin: 0 10px;
 }
@@ -83,6 +76,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 4%;
   font-size: 0.8em;
 }

@@ -1,11 +1,15 @@
+h3 {
+  font-size: 1rem;
+  padding: 5%;
+}
+
 .card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  width: 250px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +19,8 @@
 
 .card:hover {
   transform: scale(1.03) translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .card img {
@@ -26,7 +31,7 @@
 }
 
 .card-content {
-  padding: 10px;
+  padding: 5%;
 }
 
 .card-content p {
@@ -34,16 +39,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 1.5;
-}
-
-button.detalhes {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button.detalhes:hover {

@@ -3,11 +3,10 @@ footer {
   color: white;
   padding: 10px 0; 
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 20px; 
 }
 

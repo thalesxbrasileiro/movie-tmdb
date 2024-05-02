@@ -14,10 +14,10 @@ export class TmdbService {
   private apiKey = environment.apiKey;
   private language = 'pt-BR';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  searchMovies(query: string, page: number = 1): Observable<any> { // Adicionado parâmetro 'page' com valor padrão 1
-    const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}&page=${page}`; // Adicionado '&page=${page}' à URL
+  searchMovies(query: string, page: number = 1): Observable<any> { 
+    const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}&page=${page}`; 
 
     return this.http.get<any>(url).pipe(
       map(response => response.results),
@@ -29,7 +29,7 @@ export class TmdbService {
   }
 
   getMovieDetails(movieId: number): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}&language=${this.language}`;
+    const url = `${this.baseUrl}/movie/${movieId}?api_key=${this.apiKey}&language=${this.language}`;
 
     return this.http.get<any>(url).pipe(
       catchError(error => {
