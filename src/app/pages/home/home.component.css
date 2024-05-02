@@ -63,6 +63,13 @@ ul {
   margin-bottom: 2.5%;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  font-size: 0.8em;
+}
 .pagination button {
   margin: 0 10px;
   padding: 10px 20px;
@@ -73,10 +80,7 @@ ul {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 4%;
-  font-size: 0.8em;
+.pagination button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
