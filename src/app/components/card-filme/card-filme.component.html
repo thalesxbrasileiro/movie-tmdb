@@ -1,12 +1,12 @@
 <li>
     <div routerLink="/filme/{{ movie.id }}" class="card">
-        <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}">
-        <h3>{{ movie.title }}</h3>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" alt="{{ movie.title }}" class="card-img">
         
         <div class="card-content">
-            <p>Lançamento: {{ formatDate(movie.release_date) }}</p>
-            <p>Avaliação Tmdb: {{ movie.vote_average | number:'1.2-2' }}</p>
-            <p>Votos: {{ movie.vote_count }}</p><br>
+            <h3 class="card-title">{{ movie.title }}</h3>
+            <p class="card-text">Lançamento: {{ formatDate(movie.release_date) }}</p>
+            <p class="card-text">Avaliação Tmdb: {{ movie.vote_average | number:'1.2-2' }}</p>
+            <p class="card-text">Votos: {{ movie.vote_count }}</p>
         </div>
     </div>
 </li>

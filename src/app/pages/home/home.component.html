@@ -1,7 +1,7 @@
 <section>
     <div class="pesquisa">
         <input [(ngModel)]="searchQuery" type="text" placeholder="Pesquisar filme/serie no tmdb">
-        <button (click)="searchMovies(searchQuery)">Buscar</button>
+        <button class="search-button" (click)="searchMovies(searchQuery)">Buscar</button>
     </div>
 
     <div *ngIf="!searchClicked">
@@ -24,9 +24,9 @@
             <app-card-filme *ngFor="let movie of searchResults" [movie]="movie"></app-card-filme>
         </ul>
         <div class="pagination">
-            <button (click)="searchMovies(searchQuery, searchPage - 1)">Página anterior</button>
+            <button class="page-button" (click)="searchMovies(searchQuery, searchPage - 1)">Página anterior</button>
             <span>Página {{ searchPage }}</span>
-            <button (click)="searchMovies(searchQuery, searchPage + 1)">Próxima página</button>
+            <button class="page-button" (click)="searchMovies(searchQuery, searchPage + 1)">Próxima página</button>
         </div>
     </div>
 </section>

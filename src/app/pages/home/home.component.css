@@ -1,5 +1,5 @@
 section {
-  margin: 20px;
+  margin: 35px;
   margin-top: 80px;
 }
 
@@ -10,37 +10,34 @@ section {
   margin-bottom: 10px;
 }
 
-input[type="text"] {
+input {
   padding: 10px;
   width: 50%;
   border-radius: 20px 0 0 20px;
   border: 1px solid #ccc;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="text"]:hover,
-input[type="text"]:focus {
+input:hover, input:focus {
   border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-button {
+.search-button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 1em;
+  border-radius: 0px 10px 10px 0px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button.detalhes:hover {
+.search-button:hover, .search-button:focus {
   background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
+
 
 span {
   background-color: white;
@@ -70,6 +67,12 @@ ul {
 
 .pagination button {
   margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pagination {
