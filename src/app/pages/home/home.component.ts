@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   searchResults: any[] = [];
   searchQuery: string = '';
   currentPage: number = 1;
-  itemsPerPage: number = 14;
+  itemsPerPage: number = 18;
   searchClicked = false;
   searchPage: number = 1;
 

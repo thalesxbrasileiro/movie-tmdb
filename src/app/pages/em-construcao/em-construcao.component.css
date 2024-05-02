@@ -33,7 +33,7 @@ section {
 
 h1 {
   font-size: 2rem;
-  color: #333;
+  color: rgb(99, 5, 145);
   margin-bottom: 10px;
 }
 
@@ -46,7 +46,7 @@ p {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(99, 5, 145);
   color: #fff;
   text-decoration: none;
   border-radius: 10px;
