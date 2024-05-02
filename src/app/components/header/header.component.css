@@ -19,6 +19,13 @@ header {
   text-decoration: none;
   margin-left: 20px;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+  transition: color 0.3s ease; 
+}
+
+.nome-do-site:hover {
+  color: #a1887f;
 }
 
 nav ul {
@@ -38,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #a1887f;
 }
 
 nav ul .minha-conta {
