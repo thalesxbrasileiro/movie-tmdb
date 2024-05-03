@@ -5,6 +5,9 @@
                 <h2>{{ resultado.title }}</h2>
                 <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
                 <div class="info">
+                    <p id="trailer">
+                        <a href="">Ver Trailer</a>
+                    </p>
                     <p>
                         <b>Gênero(s): </b>
                         <span *ngFor="let genre of resultado.genres">
