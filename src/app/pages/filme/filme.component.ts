@@ -16,13 +16,19 @@ export class FilmeComponent implements OnInit {
 
   id = "";
   resultado: any;
+  trailer: any;
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"];
-    console.log(this.id);
+    // console.log(this.id);
     this.servico.getMovieDetails(Number(this.id)).subscribe(filme => {
       this.resultado = filme;
-      console.log(this.resultado);
+      // console.log(this.resultado);
+    });
+
+    this.servico.getTrailer(Number(this.id)).subscribe(trailer => {
+      this.trailer = trailer;
+      //console.log('Key do trailer: '+ this.trailer);
     });
   }
 

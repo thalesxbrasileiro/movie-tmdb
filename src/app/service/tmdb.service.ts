@@ -51,4 +51,15 @@ export class TmdbService {
     );
   }
 
+  getTrailer(movieId: number): Observable<any> {
+    const url = `${this.baseUrl}/movie/${movieId}/videos?api_key=${this.apiKey}`
+  
+    return this.http.get<any>(url).pipe(
+      map(response => {
+        const trailer = response.results.find((video: any) => video.type === 'Trailer');
+        return trailer ? trailer.key : null;
+      })
+    )
+  }
+
 }

@@ -6,7 +6,7 @@
                 <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
                 <div class="info">
                     <p id="trailer">
-                        Ver Trailer
+                        <a [href]="'https://www.youtube.com/watch?v=' + trailer" target="_blank">Ver Trailer</a>
                     </p>
                     <p>
                         <b>Gênero(s): </b>

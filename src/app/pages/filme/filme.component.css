@@ -74,6 +74,16 @@
   text-align: center;
 }
 
+
 #trailer:hover {
   cursor: pointer;
 } 
+
+#trailer a {
+  color: #ffffff; 
+  text-decoration: none;
+}
+
+#trailer a:visited {
+  color: #ffffff; 
+}
