@@ -1,25 +1,34 @@
-/* :host {
-  display: block;
+.dialog-section {
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-title {
+  color: #fcfcfc;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dialog-content {
   padding: 20px;
-  background-color: #fff;
+  width: 1000px;
+  height: auto;
 }
 
-h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 600;
-  color: #3f51b5;
-}
-
-iframe {
+.dialog-iframe {
   border: none;
-  width: 100%;
-  height: 500px;
-  margin-top: 15px;
 }
 
-button {
-  color: #3f51b5;
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.dialog-button {
+  color: #007bff;
   font-weight: 600;
-  margin-top: 15px;
-} */
+  text-transform: uppercase;
+}

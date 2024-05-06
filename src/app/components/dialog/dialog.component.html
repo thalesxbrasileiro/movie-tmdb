@@ -1,10 +1,8 @@
-<section>
-    <h2 mat-dialog-title>Trailer</h2>
-    <div mat-dialog-content>
+<section class="dialog-section">
+    <h2 mat-dialog-title class="dialog-title">Ver Trailer</h2>
+    <div mat-dialog-content class="dialog-content">
         <iframe width="100%" height="500" [attr.src]="trailerUrl" frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div mat-dialog-actions>
-        <button mat-button (click)="onNoClick()">Fechar</button>
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            class="dialog-iframe"></iframe>
     </div>
 </section>

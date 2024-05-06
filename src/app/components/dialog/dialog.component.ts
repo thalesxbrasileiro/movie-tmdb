@@ -18,7 +18,4 @@ export class DialogComponent {
     this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + data.trailerKey);
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 }
