@@ -12,7 +12,9 @@ import { ContaComponent } from './pages/conta/conta.component';
 import { CardFilmeComponent } from './components/card-filme/card-filme.component';
 import { FormsModule } from '@angular/forms';
 import { EmConstrucaoComponent } from './pages/em-construcao/em-construcao.component';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +26,19 @@ import { EmConstrucaoComponent } from './pages/em-construcao/em-construcao.compo
     FilmeComponent,
     ContaComponent,
     CardFilmeComponent,
-    EmConstrucaoComponent
+    EmConstrucaoComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    MatDialogModule 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

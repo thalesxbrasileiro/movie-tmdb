@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TmdbService } from '../../service/tmdb.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-filme',
@@ -12,7 +14,7 @@ export class FilmeComponent implements OnInit {
   Object: any;
   $last: any;
 
-  constructor(private route: ActivatedRoute, private servico: TmdbService) { }
+  constructor(private route: ActivatedRoute, private servico: TmdbService, public dialog: MatDialog) { }
 
   id = "";
   resultado: any;
@@ -42,6 +44,12 @@ export class FilmeComponent implements OnInit {
     const formattedMonth = month < 10 ? '0' + month : month;
 
     return `${formattedDay}/${formattedMonth}/${year}`;
+  }
+
+  openDialog() {
+    this.dialog.open(DialogComponent, {
+      data: {trailerKey: this.trailer}
+    });
   }
 
 }

@@ -58,7 +58,7 @@ ul {
 .movie-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 2.5%;
 }
 

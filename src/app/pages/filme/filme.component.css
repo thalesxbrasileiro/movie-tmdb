@@ -1,3 +1,9 @@
+.container {
+  max-width: 600px;
+  margin: 0px auto;
+  padding-bottom: 20px; 
+}
+
 .card {
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -9,7 +15,6 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -53,12 +58,6 @@
   font-weight: bold;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0px auto;
-  padding-bottom: 20px; 
-}
-
 .info {
   text-align: left;
   margin-top: 15px;
@@ -69,15 +68,21 @@
   background-color: #fb0101;
   color: #ffffff;
   padding: 5px 30px;
+  border: none;
   border-radius: 4px;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 0.9rem;
+  width: 550px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
-
 
 #trailer:hover {
   cursor: pointer;
-} 
+  background-color: #ff0000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
 
 #trailer a {
   color: #ffffff; 

@@ -5,9 +5,10 @@
                 <h2>{{ resultado.title }}</h2>
                 <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
                 <div class="info">
-                    <p id="trailer">
+                    <!-- <p id="trailer">
                         <a [href]="'https://www.youtube.com/watch?v=' + trailer" target="_blank">Ver Trailer</a>
-                    </p>
+                    </p> -->
+                    <button class id="trailer" (click)="openDialog()">Ver Trailer</button>
                     <p>
                         <b>Gênero(s): </b>
                         <span *ngFor="let genre of resultado.genres">
