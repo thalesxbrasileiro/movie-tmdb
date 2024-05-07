@@ -60,3 +60,15 @@ input.form-input:focus {
   font-size: 100%;
   width: 200px;
 }
+
+/* Estilos para telas com largura de até 600px */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    max-width: none;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+}
