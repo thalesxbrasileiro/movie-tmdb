@@ -1,5 +1,5 @@
 <section>
-    <form class="pesquisa" (submit)="searchMovies(searchQuery)">
+    <form class="pesquisa" (submit)="searchMovies(searchQuery); $event.preventDefault()">
         <input [(ngModel)]="searchQuery" name="searchQuery" type="text" placeholder="Pesquisar filme/serie no tmdb" aria-label="Pesquisar filme/serie no tmdb">
         <button class="search-button" type="submit">Buscar</button>
     </form>
