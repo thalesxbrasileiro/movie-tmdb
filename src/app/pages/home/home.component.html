@@ -1,33 +1,31 @@
 <section>
-    <div class="pesquisa">
-        <input [(ngModel)]="searchQuery" type="text" placeholder="Pesquisar filme/serie no tmdb">
-        <button class="search-button" (click)="searchMovies(searchQuery)">Buscar</button>
-    </div>
+    <form class="pesquisa" (submit)="searchMovies(searchQuery)">
+        <input [(ngModel)]="searchQuery" name="searchQuery" type="text" placeholder="Pesquisar filme/serie no tmdb" aria-label="Pesquisar filme/serie no tmdb">
+        <button class="search-button" type="submit">Buscar</button>
+    </form>
 
     <div *ngIf="!searchClicked">
-        <br>
-        <h3>Filmes mais populares:</h3><br>
-        <hr><br>
+        <h3>Filmes mais populares:</h3>
+        <hr>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of popularMovies" [movie]="movie"></app-card-filme>
         </ul>
-        <div class="pagination">
+        <nav class="pagination">
             <button (click)="previousPage()">Página anterior</button>
             <span>Página {{ currentPage }}</span>
             <button (click)="nextPage()">Próxima página</button>
-        </div>
+        </nav>
     </div>
 
     <div *ngIf="searchQuery && searchClicked">
-        <br>
-        <h3>Resultados da pesquisa:</h3><br>
+        <h3>Resultados da pesquisa:</h3>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of searchResults" [movie]="movie"></app-card-filme>
         </ul>
-        <div class="pagination">
+        <nav class="pagination">
             <button class="page-button" (click)="searchMovies(searchQuery, searchPage - 1)">Página anterior</button>
             <span>Página {{ searchPage }}</span>
             <button class="page-button" (click)="searchMovies(searchQuery, searchPage + 1)">Próxima página</button>
-        </div>
+        </nav>
     </div>
 </section>
