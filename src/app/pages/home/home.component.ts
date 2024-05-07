@@ -24,14 +24,15 @@ export class HomeComponent implements OnInit {
   }
 
   searchMovies(query: string, page: number = 1) {
-    this.searchClicked = true;
-    this.searchQuery = query;
-    this.searchPage = page;
-    this.tmdbService.searchMovies(query, page).subscribe({
-      next: movies => this.searchResults = movies,
-      error: error => console.error('Erro ao pesquisar filmes:', error)
-    });
-  }
+  this.searchClicked = true;
+  this.searchQuery = query;
+  this.searchPage = page;
+  this.searchResults = []; 
+  this.tmdbService.searchMovies(query, page).subscribe({
+    next: movies => this.searchResults = movies,
+    error: error => console.error('Erro ao pesquisar filmes:', error)
+  });
+}
 
 
   getPopularMovies(page: number, itemsPerPage: number) {

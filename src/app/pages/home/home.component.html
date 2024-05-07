@@ -17,12 +17,16 @@
         </nav>
     </div>
 
-    <div *ngIf="searchQuery && searchClicked">
-        <h3>Resultados da pesquisa:</h3>
+    <div class="result" *ngIf="searchQuery && searchClicked">
+        <h3 class="search-results">Resultados da pesquisa:</h3>
+        <hr>
         <ul class="movie-list">
             <app-card-filme *ngFor="let movie of searchResults" [movie]="movie"></app-card-filme>
         </ul>
-        <nav class="pagination">
+        <div class="not-found" *ngIf="searchResults.length === 0">
+            <p class="not-found">Nenhum filme encontrado para a pesquisa: "{{searchQuery}}"</p>
+        </div>
+        <nav class="pagination" *ngIf="searchResults.length > 0">
             <button class="page-button" (click)="searchMovies(searchQuery, searchPage - 1)">Página anterior</button>
             <span>Página {{ searchPage }}</span>
             <button class="page-button" (click)="searchMovies(searchQuery, searchPage + 1)">Próxima página</button>
