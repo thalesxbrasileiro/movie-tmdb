@@ -2,12 +2,17 @@
     <div>
         <div class="container">
             <div class="card" *ngIf="resultado">
-                <h2>{{ resultado.title }}</h2>
+                <h2 style="color: rgb(99, 5, 145);">{{ resultado.title }}</h2>
                 <img [src]="'https://image.tmdb.org/t/p/w200' + resultado.poster_path" alt="{{ resultado.title }}">
+                
+                <p class="rating">
+                    
+                        <i class="fas fa-star" style="color: chartreuse;"></i>
+                        {{ resultado.vote_average | number:'1.2-2' }}
+                    
+                </p>
+                
                 <div class="info">
-                    <!-- <p id="trailer">
-                        <a [href]="'https://www.youtube.com/watch?v=' + trailer" target="_blank">Ver Trailer</a>
-                    </p> -->
                     <button class id="trailer" (click)="openDialog()">Ver Trailer</button>
                     <p>
                         <b>Gênero(s): </b>
@@ -28,6 +33,11 @@
                             {{ produtora.name }}
                         </span>
                     </p>
+
+                    <p>
+                        <b>Orçamento: </b> {{ resultado.budget | currency:'USD':true}}
+                    </p>
+                    
                     <p>
                         <b>País da Produção: </b>
                         <span *ngFor="let pais of resultado.production_countries">
@@ -44,12 +54,6 @@
                         <b>Quantidade de votos: </b>
                         <span>
                             {{ resultado.vote_count }}
-                        </span>
-                    </p>
-                    <p>
-                        <b>Avaliação da Tmdb: </b>
-                        <span [style.color]="resultado.vote_average < 7 ? 'red' : 'blue'" style="font-weight: bold;">
-                            {{ resultado.vote_average | number:'1.2-2' }}
                         </span>
                     </p>
                 </div>

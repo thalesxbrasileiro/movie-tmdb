@@ -4,8 +4,8 @@
         
         <div class="card-content">
             <h3 class="card-title">{{ movie.title }}</h3>
+            <p class="rating"><i class="fas fa-star" style="color: chartreuse;"></i> {{ movie.vote_average | number:'1.1-1' }}</p>
             <p class="card-text">Lançamento: {{ formatDate(movie.release_date) }}</p>
-            <p class="card-text">Avaliação Tmdb: {{ movie.vote_average | number:'1.2-2' }}</p>
             <p class="card-text">Votos: {{ movie.vote_count }}</p>
         </div>
     </div>
