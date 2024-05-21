@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, map, catchError } from 'rxjs';
 import { environment } from '../../environments/environment.prod';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,9 +13,15 @@ export class TmdbService {
   private apiKey = environment.apiKey;
   private language = 'pt-BR';
 
+  searchQuery: string | undefined;
+  searchPage: number | undefined;
+
   constructor(private http: HttpClient) {}
 
   searchMovies(query: string, page: number = 1): Observable<any> { 
+    this.searchQuery = query;
+    this.searchPage = page;
+
     const url = `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${query}&page=${page}`; 
 
     return this.http.get<any>(url).pipe(

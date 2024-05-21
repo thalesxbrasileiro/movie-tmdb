@@ -16,14 +16,21 @@ export class HomeComponent implements OnInit {
   itemsPerPage: number = 20;
   searchClicked = false;
   searchPage: number = 1;
+  searchService: any;
 
   constructor(private tmdbService: TmdbService) { }
 
-  ngOnInit(): void {
-    this.getPopularMovies(this.currentPage, this.itemsPerPage);
+  ngOnInit() {
+    if (this.tmdbService.searchQuery) {
+      this.searchMovies(this.tmdbService.searchQuery, this.tmdbService.searchPage);
+    } else {
+      this.getPopularMovies(this.currentPage, this.itemsPerPage);
+    }
   }
 
   searchMovies(query: string, page: number = 1) {
+    this.tmdbService.searchQuery = query;
+    this.tmdbService.searchPage = page;
   this.searchClicked = true;
   this.searchQuery = query;
   this.searchPage = page;
