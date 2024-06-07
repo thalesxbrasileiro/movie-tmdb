@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit {
   searchMovies(query: string, page: number = 1) {
     this.tmdbService.searchQuery = query;
     this.tmdbService.searchPage = page;
-  this.searchClicked = true;
-  this.searchQuery = query;
-  this.searchPage = page;
-  this.searchResults = []; 
-  this.tmdbService.searchMovies(query, page).subscribe({
+    this.searchClicked = true;
+    this.searchQuery = query;
+    this.searchPage = page;
+    this.searchResults = []; 
+    this.tmdbService.searchMovies(query, page).subscribe({
     next: movies => this.searchResults = movies,
     error: error => console.error('Erro ao pesquisar filmes:', error)
   });
